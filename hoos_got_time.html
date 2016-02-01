@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="js/inputs.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  </head>
+
+<body>
+  <div id="top_matter">
+    <h1>Hoos Got the Time?</h1>
+    <h3>Do you?</h3>
+  </div>
+
+  <div class="container">
+    <div id="root" class="row"></div>
+  </div>
+
+  
+  <div id="info">
+    <h3>Field Information</h3>
+    <ul>
+      <li>Class Time Per Credit</li>
+      <ul>
+	<li>Hours of class time per credit taken.</li>
+	<li>UVa policy is >= 50 minutes of class per credit taken.</li>
+      </ul>
+      <li>Homework Time Per Credit</li>
+      <ul>
+	<li>Hours of time spent on non-in-class work per credit taken.</li>
+      </ul>
+      <li>Internship Time</li>
+      <ul>
+	<li> Hours per week spent at an intership or internship-like job.</li> 
+      </ul>
+      <li>Other Commitments</li>
+      <ul>
+	<li>Hours per week used for other commitments (clubs, athletics, etc...)</li>
+      </ul>
+      <li>Credits Taken</li>
+      <ul>
+	<li>The number of credits.</li>
+      </ul>
+      <li>Average Start/Stop</li>
+      <ul>
+	<li>Average time tasks start and stop being accomplished.</li>
+	<li>Classes count as tasks.</li>
+      </ul>
+      <li>Static vs. Dynamic Load</li>
+      <ul>
+	<li>Static Load is time devoted to tasks that occur at a fixed time (i.e Class)</li>
+	<li>Dynamic Load is time devoted to tasks that can be compleated at any time (i.e Readings, homework.)</li>
+      </ul>
+      <li>Active vs. Dynamic vs. Free Time</li>
+      <ul>
+	<li>Active Time is time the student is *able* to complete tasks (i.e awake).</li>
+	<li>Dynamic Time is time active the student has where any non-static task can be accomplished.</li>
+	<li>Free Time is active time the student need not spend compleating any type of task. </li>
+      </ul>
+    </ul>
+  </div>
+
+  <div name="credit">
+    By Brandon Purvis
+  </div>
+  <script>
+    set_up();
+    update();
+    $(document).keypress(update);
+    $(document).keydown(update);
+    $(document).keyup(update);
+  </script>
+</body>
+</html>
