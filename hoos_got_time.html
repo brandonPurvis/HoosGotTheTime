@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="js/inputs.js"></script>
+    <script src="js/visualize.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- Optional theme -->
@@ -20,6 +22,12 @@
 
   <div class="container">
     <div id="root" class="row"></div>
+    <div id="visual" class="row">
+      <div class="col-sm-6 col10"></div>
+      <div class="col-sm-6 col11">
+	<canvas id="canvas" width="500" height="50"></canvas>
+      </div>
+    </div>
   </div>
 
   
@@ -72,6 +80,10 @@
   <script>
     set_up();
     update();
+    attachToVisual("STATIC_LOAD", "#FF0000");
+    attachToVisual("DYNAMIC_LOAD", "#FFAA00");
+    attachToVisual("FREE_TIME", "#00AA00");
+    startVisual();
     $(document).keypress(update);
     $(document).keydown(update);
     $(document).keyup(update);

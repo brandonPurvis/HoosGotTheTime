@@ -4,7 +4,6 @@ function add_input(name, divname, ro){
     var root = document.getElementById("root");
     var div = document.createElement("DIV");
     var root_div = document.getElementById(divname);
-    console.log(root_div);
     
     var label = document.createElement("SPAN");
     var input = document.createElement("INPUT");
@@ -32,7 +31,9 @@ function get_input(name){
 
 function set_input(name, nvalue){
     var input = document.getElementById(name);
+    var event = new CustomEvent("input", {"detail": "Value has changes."});
     input.value = nvalue;
+    input.dispatchEvent(event);
 };
 
 function add_div(name){
